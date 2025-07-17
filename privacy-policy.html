@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Context Tab Manager</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            border-bottom: 3px solid #3B82F6;
+            padding-bottom: 10px;
+        }
+        
+        .language-selector {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .language-selector button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 2px solid #3B82F6;
+            background: white;
+            color: #3B82F6;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .language-selector button:hover {
+            background: #3B82F6;
+            color: white;
+        }
+        
+        .language-selector button.active {
+            background: #3B82F6;
+            color: white;
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .content.active {
+            display: block;
+        }
+        
+        .highlight {
+            background: #e3f2fd;
+            padding: 20px;
+            border-left: 4px solid #3B82F6;
+            margin: 20px 0;
+        }
+        
+        ul {
+            line-height: 2;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+        
+        strong {
+            color: #3B82F6;
+        }
+        
+        .never {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <button class="active" onclick="showLanguage('en')">English</button>
+            <button onclick="showLanguage('fr')">Français</button>
+        </div>
+        
+        <!-- English Version -->
+        <div id="content-en" class="content active">
+            <h1>Privacy Policy for Context - Smart Tab Manager</h1>
+            <p><em>Last updated: January 2025</em></p>
+            
+            <div class="highlight">
+                <strong>Your Privacy Matters</strong><br>
+                Context is designed with privacy-first principles. All your data stays on your device.
+            </div>
+            
+            <div class="section">
+                <h2>📊 Information We Collect</h2>
+                
+                <h3>Tab Information</h3>
+                <ul>
+                    <li><strong>What we collect:</strong> URLs, titles, and favicons of your open tabs</li>
+                    <li><strong>Why:</strong> To analyze and organize your tabs into meaningful workspaces</li>
+                    <li><strong>Storage:</strong> Stored locally on your device only</li>
+                </ul>
+                
+                <h3>API Key</h3>
+                <ul>
+                    <li><strong>What we collect:</strong> Your OpenAI API key (if provided)</li>
+                    <li><strong>Why:</strong> To enable AI-powered tab organization</li>
+                    <li><strong>Storage:</strong> Encrypted and stored locally in Chrome's secure storage</li>
+                </ul>
+                
+                <h3>User Preferences</h3>
+                <ul>
+                    <li><strong>What we collect:</strong> Your settings (auto-organize, notifications)</li>
+                    <li><strong>Why:</strong> To customize your experience</li>
+                    <li><strong>Storage:</strong> Stored locally on your device</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🔒 Data Storage and Security</h2>
+                <ul>
+                    <li>All data is stored <strong>locally</strong> on your device</li>
+                    <li>We use Chrome's secure storage API</li>
+                    <li>No data is sent to our servers (we don't have any!)</li>
+                    <li>Your OpenAI API key is <span class="never">never</span> shared with us</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🚫 What We DON'T Do</h2>
+                <ul>
+                    <li>We <span class="never">never</span> sell your data</li>
+                    <li>We <span class="never">never</span> track your browsing</li>
+                    <li>We <span class="never">never</span> share data with third parties</li>
+                    <li>We <span class="never">never</span> use your data for advertising</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>📧 Contact</h2>
+                <p>Questions? Reach out to us:</p>
+                <ul>
+                    <li>GitHub: [Your GitHub URL]</li>
+                    <li>Email: [Your Email]</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- French Version -->
+        <div id="content-fr" class="content">
+            <h1>Politique de Confidentialité - Context Gestionnaire d'Onglets</h1>
+            <p><em>Dernière mise à jour : Janvier 2025</em></p>
+            
+            <div class="highlight">
+                <strong>Votre Vie Privée Compte</strong><br>
+                Context est conçu avec des principes de confidentialité. Toutes vos données restent sur votre appareil.
+            </div>
+            
+            <div class="section">
+                <h2>📊 Informations que nous collectons</h2>
+                
+                <h3>Informations sur les onglets</h3>
+                <ul>
+                    <li><strong>Ce que nous collectons :</strong> URLs, titres et favicons de vos onglets ouverts</li>
+                    <li><strong>Pourquoi :</strong> Pour analyser et organiser vos onglets en espaces de travail</li>
+                    <li><strong>Stockage :</strong> Stocké localement sur votre appareil uniquement</li>
+                </ul>
+                
+                <h3>Clé API</h3>
+                <ul>
+                    <li><strong>Ce que nous collectons :</strong> Votre clé API OpenAI (si fournie)</li>
+                    <li><strong>Pourquoi :</strong> Pour activer l'organisation par IA</li>
+                    <li><strong>Stockage :</strong> Chiffrée et stockée localement</li>
+                </ul>
+                
+                <h3>Préférences utilisateur</h3>
+                <ul>
+                    <li><strong>Ce que nous collectons :</strong> Vos paramètres</li>
+                    <li><strong>Pourquoi :</strong> Pour personnaliser votre expérience</li>
+                    <li><strong>Stockage :</strong> Stocké localement sur votre appareil</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🔒 Stockage et Sécurité des Données</h2>
+                <ul>
+                    <li>Toutes les données sont stockées <strong>localement</strong></li>
+                    <li>Nous utilisons l'API de stockage sécurisé de Chrome</li>
+                    <li>Aucune donnée n'est envoyée à nos serveurs</li>
+                    <li>Votre clé API n'est <span class="never">jamais</span> partagée</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🚫 Ce que nous NE faisons PAS</h2>
+                <ul>
+                    <li>Nous ne vendons <span class="never">jamais</span> vos données</li>
+                    <li>Nous ne suivons <span class="never">jamais</span> votre navigation</li>
+                    <li>Nous ne partageons <span class="never">jamais</span> avec des tiers</li>
+                    <li>Nous n'utilisons <span class="never">jamais</span> vos données pour la publicité</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>📧 Contact</h2>
+                <p>Des questions ? Contactez-nous :</p>
+                <ul>
+                    <li>GitHub : [Votre URL GitHub]</li>
+                    <li>Email : [Votre Email]</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Context - Smart Tab Manager | Privacy First 🔒</p>
+        </div>
+    </div>
+    
+    <script>
+        function showLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-selector button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected language
+            document.getElementById('content-' + lang).classList.add('active');
+            
+            // Mark button as active
+            event.target.classList.add('active');
+            
+            // Update page language
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>
