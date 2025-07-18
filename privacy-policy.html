@@ -9,7 +9,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             background: #f5f5f5;
@@ -74,6 +74,23 @@
             padding: 20px;
             border-left: 4px solid #3B82F6;
             margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .pricing-info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
         }
         
         ul {
@@ -100,6 +117,28 @@
             color: #e74c3c;
             font-weight: bold;
         }
+        
+        .important {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: 5px;
+            color: #721c24;
+            margin: 10px 0;
+        }
+        
+        a {
+            color: #3B82F6;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
@@ -115,61 +154,115 @@
             <p><em>Last updated: January 2025</em></p>
             
             <div class="highlight">
-                <strong>Your Privacy Matters</strong><br>
-                Context is designed with privacy-first principles. All your data stays on your device.
+                <strong><span class="emoji">🔒</span> Your Privacy Matters</strong><br>
+                Context is designed with privacy-first principles. <strong>All your data stays on your device</strong> - we never store or access your information.
             </div>
             
             <div class="section">
-                <h2>📊 Information We Collect</h2>
+                <h2><span class="emoji">📊</span> Information We Collect</h2>
                 
                 <h3>Tab Information</h3>
                 <ul>
                     <li><strong>What we collect:</strong> URLs, titles, and favicons of your open tabs</li>
                     <li><strong>Why:</strong> To analyze and organize your tabs into meaningful workspaces</li>
-                    <li><strong>Storage:</strong> Stored locally on your device only</li>
+                    <li><strong>Storage:</strong> <strong>Stored locally on your device only</strong> using Chrome's secure storage API</li>
+                    <li><strong>Access:</strong> Only you have access to this data</li>
                 </ul>
                 
-                <h3>API Key</h3>
+                <h3>API Key (Optional)</h3>
                 <ul>
-                    <li><strong>What we collect:</strong> Your OpenAI API key (if provided)</li>
-                    <li><strong>Why:</strong> To enable AI-powered tab organization</li>
-                    <li><strong>Storage:</strong> Encrypted and stored locally in Chrome's secure storage</li>
+                    <li><strong>What we collect:</strong> Your OpenAI API key (if you choose to provide one)</li>
+                    <li><strong>Why:</strong> To enable AI-powered tab organization features</li>
+                    <li><strong>Storage:</strong> <strong>Encrypted and stored locally</strong> in Chrome's secure storage on your device</li>
                 </ul>
+                
+                <div class="important">
+                    <strong>Important:</strong> Your API key is <span class="never">never transmitted to us</span> - it goes directly from your browser to OpenAI's servers.
+                </div>
+                
+                <div class="pricing-info">
+                    <strong><span class="emoji">💰</span> Cost Information:</strong> When you use AI features, you pay OpenAI directly. 
+                    <a href="https://openai.com/pricing" target="_blank">View OpenAI GPT-4 Turbo pricing</a>
+                </div>
                 
                 <h3>User Preferences</h3>
                 <ul>
-                    <li><strong>What we collect:</strong> Your settings (auto-organize, notifications)</li>
-                    <li><strong>Why:</strong> To customize your experience</li>
-                    <li><strong>Storage:</strong> Stored locally on your device</li>
+                    <li><strong>What we collect:</strong> Your settings (auto-organize, notifications, theme, etc.)</li>
+                    <li><strong>Why:</strong> To customize your experience and remember your preferences</li>
+                    <li><strong>Storage:</strong> <strong>Stored locally on your device only</strong></li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2>🔒 Data Storage and Security</h2>
+                <h2><span class="emoji">🔒</span> Data Storage and Security</h2>
                 <ul>
-                    <li>All data is stored <strong>locally</strong> on your device</li>
-                    <li>We use Chrome's secure storage API</li>
-                    <li>No data is sent to our servers (we don't have any!)</li>
-                    <li>Your OpenAI API key is <span class="never">never</span> shared with us</li>
+                    <li><strong>100% Local Storage:</strong> All data is stored locally on your device using Chrome's storage API</li>
+                    <li><strong>No External Servers:</strong> We do not operate any servers or databases that store your data</li>
+                    <li><strong>No Data Transmission:</strong> No data is sent to us or any third party (except OpenAI when you use AI features with your own API key)</li>
+                    <li><strong>Encryption:</strong> Your OpenAI API key is encrypted using Chrome's secure storage</li>
+                    <li><strong>No Access:</strong> We cannot access your browsing data, tabs, or any other information</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2>🚫 What We DON'T Do</h2>
+                <h2><span class="emoji">🤖</span> Third-Party Services</h2>
+                <h3>OpenAI API (Optional)</h3>
                 <ul>
-                    <li>We <span class="never">never</span> sell your data</li>
-                    <li>We <span class="never">never</span> track your browsing</li>
-                    <li>We <span class="never">never</span> share data with third parties</li>
-                    <li>We <span class="never">never</span> use your data for advertising</li>
+                    <li><strong>When used:</strong> Only when you provide your own OpenAI API key and use AI organization features</li>
+                    <li><strong>What's sent:</strong> Tab titles and domain names (not full URLs) are sent directly from your browser to OpenAI</li>
+                    <li><strong>Your control:</strong> You can use the extension without providing an API key (basic organization features available)</li>
+                    <li><strong>Model used:</strong> GPT-4 Turbo Preview</li>
+                    <li><strong>Billing:</strong> You are billed directly by OpenAI for API usage</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <strong>Note:</strong> We don't use any other third-party services.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">⚙️</span> Extension Permissions Explained</h2>
+                <p>Our extension requests these permissions:</p>
+                <ul>
+                    <li><strong>tabs:</strong> To read tab information (titles, URLs) for organization</li>
+                    <li><strong>storage:</strong> To save your workspaces and preferences locally</li>
+                    <li><strong>contextMenus:</strong> To add right-click menu options</li>
+                    <li><strong>notifications:</strong> To show organization completion notifications</li>
+                    <li><strong>alarms:</strong> For auto-organization features</li>
+                    <li><strong>activeTab:</strong> To interact with the current active tab</li>
+                    <li><strong>host_permissions:</strong> To access tab information across all websites</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2>📧 Contact</h2>
+                <h2><span class="emoji">🚫</span> What We DON'T Do</h2>
+                <ul>
+                    <li>We <span class="never">never</span> collect, store, or have access to your browsing data</li>
+                    <li>We <span class="never">never</span> transmit your data to our servers (we don't have any!)</li>
+                    <li>We <span class="never">never</span> sell, trade, or share your data with anyone</li>
+                    <li>We <span class="never">never</span> use your data for advertising, marketing, or analytics</li>
+                    <li>We <span class="never">never</span> track your browsing behavior</li>
+                    <li>We <span class="never">never</span> store your OpenAI API key on external servers</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">👤</span> Your Rights and Control</h2>
+                <ul>
+                    <li><strong>Complete Control:</strong> You can clear all stored data at any time by uninstalling the extension</li>
+                    <li><strong>Feature Control:</strong> You can disable specific features in the extension settings</li>
+                    <li><strong>API-Free Usage:</strong> You can use the extension without providing an API key (with smart local organization)</li>
+                    <li><strong>Data Export:</strong> You can export your workspace data from the extension settings</li>
+                    <li><strong>Instant Deletion:</strong> Uninstalling the extension immediately removes all stored data</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📧</span> Contact</h2>
                 <p>Questions? Reach out to us:</p>
                 <ul>
-                    <li>GitHub: [Your GitHub URL]</li>
-                    <li>Email: [Your Email]</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/mcsedition-corp/Context/issues" target="_blank">https://github.com/mcsedition-corp/Context/issues</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:mcsedition@gmail.com">mcsedition@gmail.com</a></li>
                 </ul>
             </div>
         </div>
@@ -180,67 +273,122 @@
             <p><em>Dernière mise à jour : Janvier 2025</em></p>
             
             <div class="highlight">
-                <strong>Votre Vie Privée Compte</strong><br>
-                Context est conçu avec des principes de confidentialité. Toutes vos données restent sur votre appareil.
+                <strong><span class="emoji">🔒</span> Votre Vie Privée Compte</strong><br>
+                Context est conçu avec des principes de confidentialité. <strong>Toutes vos données restent sur votre appareil</strong> - nous ne stockons ni n'accédons jamais à vos informations.
             </div>
             
             <div class="section">
-                <h2>📊 Informations que nous collectons</h2>
+                <h2><span class="emoji">📊</span> Informations que nous collectons</h2>
                 
                 <h3>Informations sur les onglets</h3>
                 <ul>
                     <li><strong>Ce que nous collectons :</strong> URLs, titres et favicons de vos onglets ouverts</li>
-                    <li><strong>Pourquoi :</strong> Pour analyser et organiser vos onglets en espaces de travail</li>
-                    <li><strong>Stockage :</strong> Stocké localement sur votre appareil uniquement</li>
+                    <li><strong>Pourquoi :</strong> Pour analyser et organiser vos onglets en espaces de travail pertinents</li>
+                    <li><strong>Stockage :</strong> <strong>Stocké localement sur votre appareil uniquement</strong> via l'API de stockage sécurisé de Chrome</li>
+                    <li><strong>Accès :</strong> Seul vous avez accès à ces données</li>
                 </ul>
                 
-                <h3>Clé API</h3>
+                <h3>Clé API (Optionnelle)</h3>
                 <ul>
-                    <li><strong>Ce que nous collectons :</strong> Votre clé API OpenAI (si fournie)</li>
-                    <li><strong>Pourquoi :</strong> Pour activer l'organisation par IA</li>
-                    <li><strong>Stockage :</strong> Chiffrée et stockée localement</li>
+                    <li><strong>Ce que nous collectons :</strong> Votre clé API OpenAI (si vous choisissez d'en fournir une)</li>
+                    <li><strong>Pourquoi :</strong> Pour activer les fonctionnalités d'organisation par IA</li>
+                    <li><strong>Stockage :</strong> <strong>Chiffrée et stockée localement</strong> dans le stockage sécurisé de Chrome sur votre appareil</li>
                 </ul>
+                
+                <div class="important">
+                    <strong>Important :</strong> Votre clé API n'est <span class="never">jamais transmise à nous</span> - elle va directement de votre navigateur aux serveurs d'OpenAI.
+                </div>
+                
+                <div class="pricing-info">
+                    <strong><span class="emoji">💰</span> Information sur les coûts :</strong> Quand vous utilisez les fonctionnalités IA, vous payez OpenAI directement. 
+                    <a href="https://openai.com/pricing" target="_blank">Voir les tarifs GPT-4 Turbo d'OpenAI</a>
+                </div>
                 
                 <h3>Préférences utilisateur</h3>
                 <ul>
-                    <li><strong>Ce que nous collectons :</strong> Vos paramètres</li>
-                    <li><strong>Pourquoi :</strong> Pour personnaliser votre expérience</li>
-                    <li><strong>Stockage :</strong> Stocké localement sur votre appareil</li>
+                    <li><strong>Ce que nous collectons :</strong> Vos paramètres (organisation automatique, notifications, thème, etc.)</li>
+                    <li><strong>Pourquoi :</strong> Pour personnaliser votre expérience et mémoriser vos préférences</li>
+                    <li><strong>Stockage :</strong> <strong>Stocké localement sur votre appareil uniquement</strong></li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2>🔒 Stockage et Sécurité des Données</h2>
+                <h2><span class="emoji">🔒</span> Stockage et Sécurité des Données</h2>
                 <ul>
-                    <li>Toutes les données sont stockées <strong>localement</strong></li>
-                    <li>Nous utilisons l'API de stockage sécurisé de Chrome</li>
-                    <li>Aucune donnée n'est envoyée à nos serveurs</li>
-                    <li>Votre clé API n'est <span class="never">jamais</span> partagée</li>
+                    <li><strong>Stockage 100% Local :</strong> Toutes les données sont stockées localement sur votre appareil via l'API de stockage Chrome</li>
+                    <li><strong>Aucun Serveur Externe :</strong> Nous n'exploitons aucun serveur ou base de données qui stocke vos données</li>
+                    <li><strong>Aucune Transmission :</strong> Aucune donnée n'est envoyée à nous ou à des tiers (sauf à OpenAI quand vous utilisez les fonctionnalités IA avec votre propre clé API)</li>
+                    <li><strong>Chiffrement :</strong> Votre clé API OpenAI est chiffrée via le stockage sécurisé de Chrome</li>
+                    <li><strong>Aucun Accès :</strong> Nous ne pouvons pas accéder à vos données de navigation, onglets, ou autres informations</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2>🚫 Ce que nous NE faisons PAS</h2>
+                <h2><span class="emoji">🤖</span> Services tiers</h2>
+                <h3>API OpenAI (Optionnelle)</h3>
                 <ul>
-                    <li>Nous ne vendons <span class="never">jamais</span> vos données</li>
-                    <li>Nous ne suivons <span class="never">jamais</span> votre navigation</li>
-                    <li>Nous ne partageons <span class="never">jamais</span> avec des tiers</li>
-                    <li>Nous n'utilisons <span class="never">jamais</span> vos données pour la publicité</li>
+                    <li><strong>Quand utilisée :</strong> Uniquement quand vous fournissez votre propre clé API OpenAI et utilisez les fonctionnalités d'organisation IA</li>
+                    <li><strong>Ce qui est envoyé :</strong> Les titres et noms de domaine des onglets (pas les URLs complètes) sont envoyés directement de votre navigateur à OpenAI</li>
+                    <li><strong>Votre contrôle :</strong> Vous pouvez utiliser l'extension sans fournir de clé API (fonctionnalités d'organisation basique disponibles)</li>
+                    <li><strong>Modèle utilisé :</strong> GPT-4 Turbo Preview</li>
+                    <li><strong>Facturation :</strong> Vous êtes facturé directement par OpenAI pour l'utilisation de l'API</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <strong>Note :</strong> Nous n'utilisons aucun autre service tiers.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">⚙️</span> Permissions de l'extension expliquées</h2>
+                <p>Notre extension demande ces permissions :</p>
+                <ul>
+                    <li><strong>tabs :</strong> Pour lire les informations des onglets (titres, URLs) pour l'organisation</li>
+                    <li><strong>storage :</strong> Pour sauvegarder vos espaces de travail et préférences localement</li>
+                    <li><strong>contextMenus :</strong> Pour ajouter des options de menu clic-droit</li>
+                    <li><strong>notifications :</strong> Pour afficher les notifications de fin d'organisation</li>
+                    <li><strong>alarms :</strong> Pour les fonctionnalités d'organisation automatique</li>
+                    <li><strong>activeTab :</strong> Pour interagir avec l'onglet actuellement actif</li>
+                    <li><strong>host_permissions :</strong> Pour accéder aux informations des onglets sur tous les sites web</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2>📧 Contact</h2>
+                <h2><span class="emoji">🚫</span> Ce que nous NE faisons PAS</h2>
+                <ul>
+                    <li>Nous ne <span class="never">collectons jamais</span>, ne stockons jamais, ni n'avons accès à vos données de navigation</li>
+                    <li>Nous ne <span class="never">transmettons jamais</span> vos données à nos serveurs (nous n'en avons pas !)</li>
+                    <li>Nous ne <span class="never">vendons jamais</span>, n'échangeons jamais, ni ne partageons jamais vos données avec quiconque</li>
+                    <li>Nous n'<span class="never">utilisons jamais</span> vos données pour la publicité, le marketing, ou l'analytique</li>
+                    <li>Nous ne <span class="never">suivons jamais</span> votre comportement de navigation</li>
+                    <li>Nous ne <span class="never">stockons jamais</span> votre clé API OpenAI sur des serveurs externes</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">👤</span> Vos droits et contrôle</h2>
+                <ul>
+                    <li><strong>Contrôle Complet :</strong> Vous pouvez effacer toutes les données stockées à tout moment en désinstallant l'extension</li>
+                    <li><strong>Contrôle des Fonctionnalités :</strong> Vous pouvez désactiver des fonctionnalités spécifiques dans les paramètres</li>
+                    <li><strong>Utilisation Sans API :</strong> Vous pouvez utiliser l'extension sans fournir de clé API (avec organisation intelligente locale)</li>
+                    <li><strong>Export de Données :</strong> Vous pouvez exporter vos données d'espaces de travail depuis les paramètres</li>
+                    <li><strong>Suppression Instantanée :</strong> Désinstaller l'extension supprime immédiatement toutes les données stockées</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📧</span> Contact</h2>
                 <p>Des questions ? Contactez-nous :</p>
                 <ul>
-                    <li>GitHub : [Votre URL GitHub]</li>
-                    <li>Email : [Votre Email]</li>
+                    <li><strong>GitHub :</strong> <a href="https://github.com/mcsedition-corp/Context/issues" target="_blank">https://github.com/mcsedition-corp/Context/issues</a></li>
+                    <li><strong>Email :</strong> <a href="mailto:mcsedition@gmail.com">mcsedition@gmail.com</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer">
-            <p>Context - Smart Tab Manager | Privacy First 🔒</p>
+            <p>Context - Smart Tab Manager | Privacy First <span class="emoji">🔒</span></p>
+            <p><small>Cette politique de confidentialité est disponible en anglais et en français pour servir nos utilisateurs internationaux.</small></p>
         </div>
     </div>
     
